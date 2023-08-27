@@ -1,12 +1,3 @@
-/*
-game.settings.register('detectionOn', 'active', {
-    config: false,
-    scope: 'world',
-    type: Boolean,
-    default: false
-  })
-*/
-
 game.settings.register('detectionOn', 'id', {
     config: false,
     scope: 'world',
@@ -29,35 +20,13 @@ if (game.settings.get('detectionOn', 'id') > 0) {
     });
     game.settings.set('detectionOn', updateHookId)
 } else {
-    // Shut it off 
+    // Shut it off
     console.log("NO more detection")
     Hooks.off('updateToken', game.settings.get('detectionOn', id))
     game.settings.set('detectionOn', 0)
 }
 
 console.log(updateHookId)
-
-/*
-else {
-    // Remove hook
-    setMagicAura(false)
-    Hooks.off("updateToken", this.onUpdateToken)
-}
-
-onUpdateToken = (token, changes) => {
-    console.log(token, changes);
-    if (changes.x > 0 || changes.y > 0) {
-        // The token has moved
-        setMagicAura(detectMagic()) 
-    }
-};
-*/
-
-/*
-const interval = setInterval(function () {
-    detectMagic()
-}, 2000);
-*/
 
 
 function detectMagic() {
@@ -80,9 +49,9 @@ function detectMagic() {
                         relativeDistance = Math.floor(Math.sqrt(relativeDistanceX ** 2 + relativeDistanceY ** 2) * gridScaleFactor);
 
                         // There is magic around!
-                        if (relativeDistance <= spellRange) { 
+                        if (relativeDistance <= spellRange) {
                             console.log("We got magic loot!")
-                            return true 
+                            return true
                         } else {
                             console.log("No magix")
                         }
@@ -117,7 +86,7 @@ async function setMagicAura(magicAround) {
                     intensity: 5,
                     reverse: false,
                 },
-                
+
             },
         });
     }
