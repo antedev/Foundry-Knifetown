@@ -1,13 +1,15 @@
 {
-  "name": "Knifetown",
-  "title": "Cool stuff when gaming in Knifetown",
-  "description": "Collection of macros, scripts and such for the Knifetown game",
-  "author": "anteD",
+  "id": "knifetown",
+  "title": "Stuff for playing in Knifetown",
+  "description": "Simple module to learn and add some specifics for playing in knifetown",
+  "authors": [
+    {
+    "name": "Ante"
+    }
+  ],
   "version": "0.1.0",
-  "minimumCoreVersion": "11.X.X",
-  "compatibleCoreVersion": "11.X.X",
-  "scripts": ["scripts/main.js"],
-  "styles": ["styles/styleMain.css"],
-  "url": "https://github.com/antedev/Foundry-Knifetown",
-  "manifest": "https://github.com/antedev/Foundry-Knifetown/knifetown.json"
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11"
+  }
 }
